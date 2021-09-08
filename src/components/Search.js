@@ -4,10 +4,10 @@ function Search({onListFormSubmit}) {
   const [input, setInput] = useState('')
   function handleSubmit(e) {
     e.preventDefault();
-    // onListFormSubmit(input)
-    // setInput('')
+    onListFormSubmit(input)
+    // setInput(input)
   }
-  onListFormSubmit(input)
+  // onListFormSubmit(input)
 
   return (
     <form className="searchbar" onSubmit={handleSubmit}>

@@ -22,8 +22,9 @@ function handleListFormSubmit(searchTerm){
 // console.log(searchTerm)
 
 
-const filteredList = listings.filter(item => item.description.toLowerCase().includes(searchTerm.toLowerCase()))
-
+const filteredList = 
+listings.filter(item => item.description.toLowerCase().includes(searchTerm.toLowerCase()))
+.sort((item1, item2) => item1.location.localeCompare(item2.location))
 
   return (
     <div className="app">
